@@ -21,12 +21,12 @@
         <div class="container">
             <a href="#" class="logo">Mohammed</a>
             <nav>
-                <span class="icon">
+                <span class="icon" id="toggle_menu">
                     <span></span>
                     <span></span>
                     <span></span>
                 </span>
-                <ul>
+                <ul id="links">
                     <li><a href="#services">services</a></li>
                     <li><a href="#skills">Skills </a></li>
                     <li><a href="#projects">Projects</a></li>
@@ -86,7 +86,7 @@
                     <p>User Interfaces</p>
                     <strong>
                         <span>Leon</span>
-                        <a href="http://mohamedm.rf.gd/leon/">More details</a>
+                        <a href="https://mhmh-m.github.io/leon/">More details</a>
                     </strong>
                 </div>
             </div>
@@ -98,7 +98,7 @@
                     <p>User Interfaces</p>
                     <strong>
                         <span>Kasper</span>
-                        <a href="http://mohamedm.rf.gd/kasper/">More details</a>
+                        <a href="https://mhmh-m.github.io/kasper/">More details</a>
                     </strong>
                 </div>
             </div>
@@ -110,6 +110,18 @@
                     <p>User Interfaces</p>
                     <strong>
                         <span>Elzer-World</span>
+                        <a href="https://mhmh-m.github.io/elzero/">More details</a>
+                    </strong>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imge">
+                    <img src="imges/azkar.PNG" alt="photo">
+                </div>
+                <div class="info">
+                    <p>User Interfaces</p>
+                    <strong>
+                        <span>Azkar</span>
                         <a href="http://mohamedm.rf.gd/Elzero-World/">More details</a>
                     </strong>
                 </div>
@@ -119,21 +131,27 @@
     <!-- End Projects-Section -->
     <!-- Start Contact-Section -->
     <section class="contact" id="contact">
-        <h2 class="title">Let`s Work Together</h2>
-        <div class="content">
-            <div class="box">
-                <div class="icon"><i class="fas fa-phone-alt"></i></div>
-                <div class="info">
-                    <h3>Phone</h3>
-                    <p>+0201008202048</p>
-                </div>
-            </div>
-            <div class="box">
-                <div class="icon"><i class="fab fa-whatsapp"></i></div>
-                <div class="info">
-                    <h3>WhatsApp</h3>
-                    <p>+01008202048</p>
-                </div>
+        <div class="container-contact">
+            <button class="icon center" id="btn">
+                <i class="fa-solid fa-phone" style="--color: #00c278;"></i>
+            </button>
+            <a href="https://www.facebook.com/profile.php?id=100006060525730" class="icon social"
+                style="--i:0; --color:#0000dd;">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/mhmed_abd_el_ghany/" class="icon social"
+                style="--i:1; --color: #ff008c;">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://twitter.com/Mohamme86456854" class="icon social" style="--i:2; --color:#002fff;">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/mohammed-abd-al-ghany-3783bb239/" class="icon social"
+                style="--i:3; --color: #002fff;">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <div class="icon social" id="whatsApp" style="--i:4; --color:#00ff00;">
+                <i class="fa-brands fa-whatsapp"></i>
             </div>
         </div>
     </section>
@@ -149,6 +167,7 @@
         </div>
     </footer>
     <!-- End Footer -->
+    <script src="main.js"></script>
 </body>
 
 </html>
