@@ -80,3 +80,15 @@ document.addEventListener('click', function (e) {
     document.querySelector(".popup-overlay").remove();
   }
 })
+
+let scrollUpBtn = document.querySelector(".scroll-up");
+
+window.onscroll = function () {
+  if (window.scrollY >= 1000) {
+    scrollUpBtn.style.display = "block";
+  }
+};
+
+scrollUpBtn.onclick = function () {
+  window.scrollTo(0, 0);
+};

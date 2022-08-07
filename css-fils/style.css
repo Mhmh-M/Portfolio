@@ -4,7 +4,7 @@
     --main-color: #2196f3;
     --alt-color: #1787e0;
     --black-color: black;
-    --main-transition: .25s ease;
+    --main-transition: .3s ease;
     --alt-transition: 0.5s ease;
 }
 
@@ -132,6 +132,25 @@ header .container nav ul {
 
 
 /* End Header */
+
+.scroll-up {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    z-index: 5;
+    background: linear-gradient(to right, #1368cc 50%, var(--main-color) 50%) no-repeat scroll right bottom/210% 100% var(--main-color);
+    width: 40px;
+    height: 40px;
+    border: none;
+    color: white;
+    transition: var(--alt-transition);
+    border-radius: 5px;
+}
+
+.scroll-up:hover {
+    background-position: left bottom;
+}
 
 section {
     padding: 100px 0;
