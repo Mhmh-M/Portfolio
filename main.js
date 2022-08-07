@@ -37,8 +37,6 @@ center.addEventListener('click', () => {
   social.forEach((e) => {
     e.classList.toggle('rotate')
   });
-  console.log("Hello From Test")
-
 }
 )
 
