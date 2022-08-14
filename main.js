@@ -84,8 +84,10 @@ document.addEventListener('click', function (e) {
 let scrollUpBtn = document.querySelector(".scroll-up");
 
 window.onscroll = function () {
-  if (window.scrollY >= 1000) {
+  if (window.scrollY >= 800) {
     scrollUpBtn.style.display = "block";
+  } else {
+    scrollUpBtn.style.display = "none";
   }
 };
 
