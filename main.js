@@ -100,13 +100,12 @@ scrollUpBtn.onclick = function () {
 };
 
 
-setTimeout(() => {
-  loader.classList.add("noloader");
-  // window.addEventListener("load", () => {
 
-  //   console.log("Done")
-  // })
-}, 3000)
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    loader.classList.add("noloader");
+  }, 3000)
+})
 
 
 
