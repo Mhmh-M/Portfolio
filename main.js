@@ -5,6 +5,10 @@ let menu_active = false;
 let center = document.querySelector("#btn");
 let social = document.querySelectorAll('.container-contact .social');
 let whatsApp = document.querySelector("#whatsApp");
+const loader = document.querySelector(".loader");
+let ourSkills = document.querySelector(".our-skills");
+let spans_Skills = document.querySelectorAll(".the-progress span");
+
 
 
 
@@ -94,3 +98,26 @@ window.onscroll = function () {
 scrollUpBtn.onclick = function () {
   window.scrollTo(0, 0);
 };
+
+
+setTimeout(() => {
+  loader.classList.add("noloader");
+  // window.addEventListener("load", () => {
+
+  //   console.log("Done")
+  // })
+}, 3000)
+
+
+
+
+window.onscroll = function () {
+
+  if (window.scrollY >= ourSkills.offsetTop - 300) {
+
+    spans_Skills.forEach(s => {
+
+      s.style.width = s.dataset.width
+    })
+  }
+}
