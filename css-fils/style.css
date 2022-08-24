@@ -554,6 +554,10 @@ hr {
     color: var(--alt-color);
 }
 
+.projects .with-bootstrap {
+    text-align: center;
+}
+
 /* End Projects-Section */
 
 /* Start Contact-section */
