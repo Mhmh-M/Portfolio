@@ -8,6 +8,10 @@ let whatsApp = document.querySelector("#whatsApp");
 const loader = document.querySelector(".loader");
 let ourSkills = document.querySelector(".our-skills");
 let spans_Skills = document.querySelectorAll(".the-progress span");
+let normal_Boxes_go_Down = document.querySelector(".projects-normal .go-down");
+let bootstrap_Boxes_go_Down = document.querySelector(".projects-with-bootstrap .go-down");
+let normal_Boxes = document.querySelectorAll(".projects-normal .box")
+let bootstrap_Boxes = document.querySelectorAll(".projects-with-bootstrap .box")
 
 
 
@@ -88,3 +92,39 @@ window.onscroll = function () {
     })
   }
 }
+
+goDownCheker(normal_Boxes, normal_Boxes_go_Down);
+goDownCheker(bootstrap_Boxes, bootstrap_Boxes_go_Down)
+
+let display_t = false
+normal_Boxes_go_Down.addEventListener("click", () => {
+  checker(normal_Boxes);
+})
+bootstrap_Boxes_go_Down.addEventListener("click", () => {
+  checker(bootstrap_Boxes);
+})
+
+
+function checker(b) {
+  if (!display_t) {
+    nothing("block", b)
+    display_t = true
+  } else {
+    nothing("none", b)
+    display_t = false
+  }
+}
+function nothing(type, box) {
+  for (let i = 3; i < box.length; i++) {
+    box[i].style.cssText = `display:${type}`;
+  }
+}
+function goDownCheker(boxes, d) {
+  if (boxes.length < 3) {
+    d.style.display = "none";
+  } else {
+    d.style.display = "block";
+  }
+}
+
+AOS.init();

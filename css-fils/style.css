@@ -488,25 +488,25 @@ section {
 }
 
 /* .projects .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 50px;
+    position: relative;
 } */
+
 .projects-normal,
 .projects-with-bootstrap {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 30px;
     margin-top: 50px;
+    position: relative;
 }
 
-hr {
+.projects hr {
     height: 1px;
     background-color: #000016;
     width: 70%;
-    margin: 50px auto;
+    margin: 150px auto 50px;
 }
+
 
 .projects .box {
     background-color: #fff;
@@ -515,7 +515,13 @@ hr {
     transition: var(--alt-transition);
     overflow: hidden;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    display: none;
+
 }
+
+/* .projects .projects-with-bootstrap .box {
+    display: block;
+} */
 
 .projects .box:hover {
     transform: scale(1.1);
@@ -557,6 +563,35 @@ hr {
 .projects .with-bootstrap {
     text-align: center;
 }
+
+.projects .go-down {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--main-color);
+    bottom: -70px;
+}
+
+.projects .go-down:hover {
+    color: var(--alt-color);
+}
+
+.projects .go-down i {
+    animation: bouncing 1.5s infinite;
+
+}
+
+/* @media (max-width: 576px) {
+    .projects .go-down {
+        bottom: -4%;
+    }
+}
+
+@media (max-width: 991px) {
+    .projects .go-down {
+        bottom: -8%;
+    }
+} */
 
 /* End Projects-Section */
 
@@ -673,7 +708,7 @@ footer .whatsApp:hover {
 footer {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 12px;
     background-color: #000016;
     color: #fff;
     position: relative;
@@ -853,4 +888,31 @@ footer p span {
     100% {
         transform: rotate(360deg);
     }
+}
+
+@keyframes bouncing {
+
+    0%,
+    10%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40%,
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+
+.projects-normal .box:first-child,
+.projects-normal .box:nth-child(2),
+.projects-normal .box:nth-child(3),
+.projects-with-bootstrap .box:first-child,
+.projects-with-bootstrap .box:nth-child(2),
+.projects-with-bootstrap .box:nth-child(3) {
+    display: block;
 }
