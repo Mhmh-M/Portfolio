@@ -128,3 +128,15 @@ function goDownCheker(boxes, d) {
 }
 
 AOS.init();
+
+
+
+
+
+
+
+
+const strings = ["David", "Richard", "Karen", "Amanda", 7];
+
+const resultStrings = names.map((string) => string.length);
+console.log(resultStrings)
